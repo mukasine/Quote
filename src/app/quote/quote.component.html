@@ -2,10 +2,10 @@
 <h1>My Quotes</h1>
 <hr>
 <ul>
-    <div *ngFor='let Quote of quotes;let i = index'>
-        <li >{{Quote.name}}</li>
+    <div *ngFor='let quote of quotes;let i = index'>
+        <li id="{{i}}" appStrikethrough>{{quote.name}} due on {{quote.completeDate|date|uppercase}} </li>
         <button  (click)='toogleDetails(i)'>Toogle Details</button>
-        <app-quote-details *ngIf="Quote.showDescription" [Quote]='quote'(isComplete)='completeQuote($ervent,i)' ></app-quote-details>
+        <app-quote-details *ngIf="quote.showDescription" [quote]='quote'(isComplete)='completeQuote($ervent,i)' ></app-quote-details>
 
     </div>
    
@@ -14,4 +14,4 @@
   <!-- <p *ngIf='Quotes.length > 5'>You have too many Quotes</p> -->
 
 
-  
+ 
