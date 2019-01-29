@@ -1,6 +1,4 @@
-<p>
-    quote-form works!
-  </p>
+
 <div class="container-fluid">
     <div class="row">
         <form (ngSubmit)='submitQuote()' #quoteForm='ngForm'> 
@@ -10,11 +8,11 @@
                 <input type="text"  class="form-control" id="name" [(ngModel)]="newQuote.name" name="name" #name="ngModel" required>
                 
                 <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
-                    <p> Name is Required</p>
+                    <!-- <p> Name is Required</p> -->
                     
                 </div>
             </div>
-            <!-- Description Input -->
+            Description Input
             <div class="form-group">
                 <label for="description">Description</label>
                 <textarea class="form-control" id="description" rows="4" [(ngModel)]="newQuote.description" name="description" #description="ngModel" required></textarea>
@@ -24,12 +22,13 @@
                 </div>
                 
             </div>
+            
             <!-- Date Input -->
             <div class="form-group">
                 <label for="complete">Completion</label>
                 <input type='date' id="complete" [(ngModel)]="newQuote.completeDate" name="completeDate" #completeDate="ngModel" required >
                 <div [hidden]="completeDate.valid || completeDate.pristine" class="alert alert-danger">
-                    <p> Complete Date is Required</p>
+                    <!-- <p> Complete Date is Required</p> -->
                     
                 </div>
             </div>
