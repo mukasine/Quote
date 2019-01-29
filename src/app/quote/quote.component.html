@@ -1,6 +1,6 @@
 
-<h1>My Quotes</h1>
 <hr>
+<app-quote-form (addQuote)="addNew($event)"></app-quote-form>
 <ul>
     <div *ngFor='let quote of quotes;let i = index'>
         <li id="{{i}}" appStrikethrough>{{quote.name}} due on {{quote.completeDate|date|uppercase}} </li>
@@ -10,7 +10,7 @@
     </div>
    
 </ul>
-<div class="container"></div>
+
 
 <div class="row" *ngFor="let quote of quotes;let i = 'index'">
     <div class="row">
@@ -19,9 +19,7 @@
 
     </div><h1>My Goals</h1>
 <div class="container">
-    <div class="row">
-        <app-quote-form></app-quote-form>
-    </div>
+
 </div>
     
     <div class="row" *ngIf="quote.showDescription">
@@ -29,10 +27,5 @@
 </div>
 
 </div>
-
-    
-
-
-
 
 
