@@ -26,7 +26,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
     4. node
     5. Html
 ## Support and contact details
-Contact me on mclaremukasine@gmail.com for any comments, reviews or advice.
+Contact me on mclaremukasine@gmail.com,tel:0782586013.
 ### License
 **[MIT](http://choosealisence.com/licenses/mit/Copyright) ** (c) **MUkasine Marie Claire**
 
