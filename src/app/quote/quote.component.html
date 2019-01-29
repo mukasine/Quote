@@ -10,7 +10,21 @@
     </div>
    
 </ul>
-<!-- <p *ngIf='Quotes.length > 5'>You have too many Quotes</p> -->
-  <!-- <p *ngIf='Quotes.length > 5'>You have too many Quotes</p> -->
+<div class="container"></div>
 
- 
+<div class="row" *ngFor="let quote of quotes;let i = 'index'">
+    <div class="row">
+        <h4 id="{{i}}" appStrikethrough>{{quote.name}} due on {{quote.completeDate|date|uppercase}}</h4>
+        <button class="btn btn-primary" (click)='toogleDetails(i)'>Toogle Details</button>
+    </div>
+    
+    <div class="row" *ngIf="quote.showDescription">
+    <app-quote-details  [quote]='quote' (isComplete)= 'deleteQuote($event,i)'></app-quote-details>
+</div>
+
+</div>
+
+
+
+
+
